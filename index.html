@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Periodic Table</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Interactive Periodic Table</h1>
+            <p>Click on any element to learn more!</p>
+        </header>
+        
+        <div class="controls">
+            <input type="text" id="searchInput" placeholder="Search for an element (name, symbol, or atomic number)">
+            <button id="gameBtn">Play Element Game</button>
+            <button id="favoritesBtn">Show Favorites</button>
+        </div>
+        
+        <div id="periodicTable"></div>
+        
+        <div id="elementModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="elementDetails"></div>
+            </div>
+        </div>
+        
+        <div id="gameModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="gameContent">
+                    <h2>Guess the Element!</h2>
+                    <p id="clueText"></p>
+                    <input type="text" id="guessInput" placeholder="Enter element name">
+                    <button id="submitGuess">Submit</button>
+                    <p id="resultMessage"></p>
+                    <button id="nextClue">Next Clue</button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="favoritesModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="favoritesContent">
+                    <h2>Favorited Elements</h2>
+                    <div id="favoritesList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
